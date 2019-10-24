@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include<math.h>
+
+int main()
+{
+	int n,i,p=1;
+	int a[n];
+	long long int answer=1;
+	scanf("%u", &n);              			   
+	for(i=0;i<n;i++)
+	{
+	    scanf("%u ",&a[i]);
+	    p=(answer*a[i]);
+	    answer=p%(pow(10,9)+7);
+	}
+	printf("%llu",answer);
+	return 0;
+}
